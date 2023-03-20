@@ -1,0 +1,20 @@
+{
+  "name": "express-responder",
+  "version": "1.0.0",
+  "description": "Helper for easy json responses on Express.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "json",
+    "api",
+    "response"
+  ],
+  "author": "Nicolás Oleinizak",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.0.2"
+  }
+}
