@@ -1,8 +1,9 @@
-import { BAD_REQUEST, NOT_FOUND, SERVER_ERROR } from './Messages'
+import { BAD_REQUEST, CREATED, NOT_FOUND, SERVER_ERROR } from './Messages'
 
 export const respond = (res: any) => {
 
   const codeToMessage = <any> {
+    201: CREATED,
     400: BAD_REQUEST,
     404: NOT_FOUND,
     500: SERVER_ERROR

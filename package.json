@@ -2,7 +2,7 @@
   "name": "express-responder",
   "version": "1.0.0",
   "description": "Helper for easy json responses on Express.js",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
