@@ -27,8 +27,8 @@ export const respond = (res: any) => {
     ok: (data: any) => {
       resolve(200, {data})
     },
-    created: () => {
-      resolve(201)
+    created: (data: any) => {
+      resolve(201, {data})
     },
     badRequest: () => {
       resolve(400)
