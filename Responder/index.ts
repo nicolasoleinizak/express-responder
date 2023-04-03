@@ -27,11 +27,20 @@ export const respond = (res: any) => {
     ok: (data: any) => {
       resolve(200, {data})
     },
-    created: (data: any) => {
-      resolve(201, {data})
+    created: (data?: any) => {
+      if(data){
+        resolve(201, {data})
+      } else {
+        resolve(201)
+      }
     },
-    badRequest: () => {
-      resolve(400)
+    badRequest: (message?: string) => {
+      console.log(message)
+      if(message){
+        resolve(400, {message})
+      } else {
+        resolve(400)
+      }
     },
     notFound: () => {
       resolve(404)
