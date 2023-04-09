@@ -1,10 +1,12 @@
-import { BAD_REQUEST, CREATED, NOT_FOUND, SERVER_ERROR } from './Messages'
+import { BAD_REQUEST, CREATED, FORBIDDEN, NOT_FOUND, SERVER_ERROR, UNAUTHORIZED } from './Messages'
 
 export const respond = (res: any) => {
 
   const codeToMessage = <any> {
     201: CREATED,
     400: BAD_REQUEST,
+    401: UNAUTHORIZED,
+    403: FORBIDDEN,
     404: NOT_FOUND,
     500: SERVER_ERROR
   }
@@ -35,12 +37,17 @@ export const respond = (res: any) => {
       }
     },
     badRequest: (message?: string) => {
-      console.log(message)
       if(message){
         resolve(400, {message})
       } else {
         resolve(400)
       }
+    },
+    unauthorized: (message?: string) => {
+      resolve(401, {message})
+    },
+    forbidden: (message?: string) => {
+      resolve(403, {message})
     },
     notFound: () => {
       resolve(404)
