@@ -1,5 +1,5 @@
 export const UNAUTHORIZED = 'The request is not authorized'
-export const FORBIDDEN = 'The request has not access to the resource'
+export const FORBIDDEN = 'Forbidden access to this resource'
 export const CREATED = 'The resource was created successfully'
 export const NOT_FOUND = 'Resource not found'
 export const SERVER_ERROR = 'Internal server error'
